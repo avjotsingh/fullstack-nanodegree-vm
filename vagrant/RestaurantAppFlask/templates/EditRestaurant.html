@@ -1,0 +1,18 @@
+{% extends 'Base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<h2>Edit the name of the restaurant</h2>
+
+<p>Name:</p>
+<form method="POST" action="{{ url_for('editRestaurant', restaurant_id=restaurant.id) }}" enctype="multipart/form-data">
+<input type="text" name="restaurant_name" placeholder="{{ restaurant.name }}">
+<input type="submit" value="Edit">
+<a href="{{ url_for('showRestaurants') }}">Cancel</a>
+</form>
+
+{% endblock %}
